@@ -271,6 +271,11 @@ function update_score(){
 
 	// add firekill points
 	new_score = new_score + FireKillPoints[firekill_count];
+	if (firekill_count > 3) {
+        document.getElementById(FireKillElementId).className="item active";
+    } else {
+        document.getElementById(FireKillElementId).className="item inactive";
+    }
 
 	//Update score
 	score_div = document.getElementById('score');
